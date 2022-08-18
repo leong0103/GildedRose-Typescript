@@ -76,12 +76,31 @@ describe('Gilded Rose', function () {
         expect(items[0].quality).to.equal(90); 
     });
 
+    it('all items no more than Qulity in 50', function() {
+        const gildedRose = new GildedRose([ new Item('Aged Brie', 9, 50), new Item('Backstage passes to a TAFKAL80ETC concert', 3, 50)]);
+        const items = gildedRose.updateQuality();
+        
+        // console.log(items[0]);
+        // console.log(items[1]);
+        
+        expect(items[0].name).to.equal('Aged Brie');
+        expect(items[0].sellIn).to.equal(8);
+        expect(items[0].quality).to.equal(50); 
+
+          
+        expect(items[1].name).to.equal('Backstage passes to a TAFKAL80ETC concert');
+        expect(items[1].sellIn).to.equal(2);
+        expect(items[1].quality).to.equal(50); 
+    });
+
+    
+
     // it('for all items, Quality is never negative', function() {
     //     const gildedRose = new GildedRose([ new Item('Conjured', 0, -1),]);
     //     const items = gildedRose.updateQuality();
     //     console.log(items);
         
-    // //     expect(items[0].name).to.equal('Sulfuras');
+    // //     expect(items[0].name).to.equal('Conjured');
     // //     expect(items[0].sellIn).to.equal(10);
     // //     expect(items[0].quality).to.equal(90); 
     // // });
