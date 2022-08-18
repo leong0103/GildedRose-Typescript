@@ -67,3 +67,14 @@ export class GildedRose {
         return this.items;
     }
 }
+
+
+    // 1. Aged Brie    Selling < 0, Quality + 2, always keep increase
+
+    // 2. Sulfuras, Hand of Ragnaros       always same quality value
+
+    // 3. Backstage passes to a TAFKAL80ETC concert     
+    //  Q add 2, Selling <= 10    Q add 3, Selling <= 5
+    // 
+    // Item have to add in the program
+    // 4. Conjured    Selling - 1,   Quality - 2
